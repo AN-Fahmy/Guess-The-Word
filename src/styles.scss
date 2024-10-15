@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  transition: all 0.7s;
+}
+body{
+  background-image: url('./assets/images/62394d753859943e6a1a36443ef78795.gif');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

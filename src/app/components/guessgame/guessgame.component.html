@@ -1,0 +1,53 @@
+<section class="text-center text-white my-2">
+  <h1>Guess The Word</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="inputs-container p-3">
+          @for (tries of numberOfTries(); track $index) {
+            <div #inputs class="inputs d-flex justify-content-center align-items-center gap-3 mb-2">
+              <h5>Try {{$index + 1}}</h5>
+              @for(input of numberOfLetters(); track $index){
+                <input #input class="p-1 rounded-2" type="text" maxlength="1" (input)="convertInputValue($event)" (keydown)="moveRightAndLeft($event)">
+              }
+            </div>
+          }
+
+          <div class="text-center">
+            <button #check class="btn btn-danger" (click)="logicGame()">Check Word</button>
+            <button  #hint class="btn btn-success mx-2" (click)="getHint()"><span>{{numberOfHints}}</span> Hint</button>
+            <button  #hint class="btn btn-warning" (click)="resetGame()">Reset Game</button>
+          </div>
+
+
+          @if(successWord()){
+            <h4 class="text-success fs-2">{{msgWin()}}</h4>
+          } @else {
+            <h4 class="text-danger fs-2">{{msgLose()}}</h4>
+          }
+
+        </div>
+
+      </div>
+      <div class="col-lg-5">
+        <div class="rules-container p-3">
+          <h1>Key Color</h1>
+          <div class="rules text-start d-flex flex-column gap-3 mt-4">
+            <div class="rule d-flex justify-content-start align-items-center gap-2">
+              <span class="bg-warning rounded-circle"></span>
+              <h5>Letter Is Right And In Place</h5>
+            </div>
+            <div class="rule d-flex justify-content-start align-items-center gap-2">
+              <span class="bg-success rounded-circle"></span>
+              <h5>Letter Is Right But Not in Place</h5>
+            </div>
+            <div class="rule d-flex justify-content-start align-items-center gap-2">
+              <span class="bg-dark rounded-circle"></span>
+              <h5>Letter Is Wrong And Not Exists In Word</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

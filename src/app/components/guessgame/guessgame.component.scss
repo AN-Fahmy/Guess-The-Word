@@ -1,0 +1,80 @@
+*{
+  font-family: "Lato", sans-serif;
+}
+h1{
+  font-size: 50px;
+  text-shadow: 0 0 5px blue,
+              0 0 10px blue,
+              0 0 15px blue,
+              0 0 20px blue;
+  color: #fff;
+}
+.inputs{
+  input{
+    width: 70px;
+    height: 70px;
+    font-size: 3.75rem;
+    padding: 10px;
+    border:none;
+    border-bottom: 5px solid #333;
+    caret-color: red;
+    text-align: center;
+    &:focus{
+      outline-color: #eee;
+    }
+    &.in-place{
+      background-color: #FFC107;
+      border: #FFC107;
+      color: #fff;
+    }
+    &.not-place{
+      background-color: #198754;
+      border: #198754;
+      color: #fff;
+    }
+    &.not{
+      background-color: #212529;
+      border: #212529;
+      color: #fff;
+    }
+  }
+}
+.stopEvent{
+  pointer-events: none;
+}
+.rules{
+  .rule{
+    span{
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+}
+.text-success{
+  text-shadow: 0 0 5px green,0 0 10px green,0 0 15px green;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: fit-content;
+  margin:10px auto;
+  padding: 10px;
+}
+.text-danger{
+  text-shadow: 0 0 5px red,0 0 10px red,0 0 15px red;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: fit-content;
+  margin:10px auto;
+  padding: 10px;
+}
+@media (max-width: 580px) {
+  .inputs{
+    display: block !important;
+    input{
+      width: 60px;
+      height: 60px;
+      margin-inline: 5px;
+    }
+  }
+
+}
