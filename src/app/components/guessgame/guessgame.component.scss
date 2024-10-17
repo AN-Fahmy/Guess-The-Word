@@ -23,18 +23,18 @@ h1{
       outline-color: #eee;
     }
     &.in-place{
-      background-color: #FFC107;
-      border: #FFC107;
-      color: #fff;
-    }
-    &.not-place{
       background-color: #198754;
       border: #198754;
       color: #fff;
     }
+    &.not-place{
+      background-color: #FFC107;
+      border: #FFC107;
+      color: #fff;
+    }
     &.not{
-      background-color: #212529;
-      border: #212529;
+      background-color: #BB2D3B;
+      border: #BB2D3B;
       color: #fff;
     }
   }
@@ -67,6 +67,7 @@ h1{
   margin:10px auto;
   padding: 10px;
 }
+
 @media (max-width: 580px) {
   .inputs{
     display: block !important;
@@ -76,5 +77,19 @@ h1{
       margin-inline: 5px;
     }
   }
+}
 
+@media (max-width: 498px) {
+  h1{
+    font-size: 33px;
+  }
+  .inputs{
+    display: block !important;
+    input{
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+      margin-inline: 5px;
+    }
+  }
 }

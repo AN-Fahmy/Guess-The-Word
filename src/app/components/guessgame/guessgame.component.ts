@@ -106,7 +106,7 @@ export class GuessgameComponent implements OnInit , AfterViewInit{
       this.msgLose.set(`Your Lose The Word Is ${this.guessWord().toUpperCase()}`)
       setTimeout(()=>{
         this.resetGame()
-      }, 1500)
+      }, 3000)
     }
   }
 
@@ -210,9 +210,6 @@ export class GuessgameComponent implements OnInit , AfterViewInit{
       let randomIndex = Math.floor(Math.random() * emptyEnableInput.length)
       let randomInput = emptyEnableInput[randomIndex]
       let indexToFill = enableInputs.map(input => input.nativeElement).indexOf(randomInput)
-      console.log(randomIndex);
-      console.log(randomInput);
-      console.log(indexToFill);
       if(indexToFill !== -1){
         randomInput.value = this.guessWord()[indexToFill].toUpperCase()
       }
@@ -239,7 +236,6 @@ export class GuessgameComponent implements OnInit , AfterViewInit{
     this.msgWin.set('')
 
     this.shuffleWord()
-    console.log(this.guessWord());
 
     this.disabledAllInput()
   }
