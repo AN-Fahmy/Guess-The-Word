@@ -106,7 +106,7 @@ export class GuessgameComponent implements OnInit , AfterViewInit{
       this.msgLose.set(`Your Lose The Word Is ${this.guessWord().toUpperCase()}`)
       setTimeout(()=>{
         this.resetGame()
-      }, 3000)
+      }, 3500)
     }
   }
 
@@ -186,7 +186,7 @@ export class GuessgameComponent implements OnInit , AfterViewInit{
       this.disabledInput(this.hintBtn.nativeElement)
       setTimeout(()=>{
         this.resetGame()
-      }, 1500)
+      }, 3500)
     } else {
       this.perpareNextRound(this.currentTry);
       this.currentTry++
